@@ -9,3 +9,9 @@ More Resources:
 [SBX Customize Documentation](https://docs.docker.com/ai/sandboxes/customize/)
 
 [SBX Kits Spec Reference](https://docs.docker.com/ai/sandboxes/customize/kit-reference/)
+
+Also included are the slides from the talks on 2026-07-08:
+
+[Why yes that was your Home Directory](./sbx-homedir.pptx)
+
+[Setting up SBX with Kits](./sbx-workshop-slides.pptx)
