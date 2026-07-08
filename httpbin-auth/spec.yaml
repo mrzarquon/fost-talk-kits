@@ -1,0 +1,25 @@
+schemaVersion: "1"
+kind: mixin
+name: httpbin-auth
+displayName: httpbin auth-header demo
+description: >
+  Workshop §03 demo — the proxy injects "Authorization: Bearer <DEMO_TOKEN>"
+  on requests to httpbingo.org; the token never enters the sandbox.
+
+credentials:
+  sources:
+    demo:
+      env:
+        - DEMO_TOKEN          # list, not a bare string
+
+environment:
+  proxyManaged:
+    - DEMO_TOKEN              # appears inside the VM as a sentinel, not the value
+
+network:
+  serviceDomains:             # map of domain → credential source id
+    httpbingo.org: demo
+  serviceAuth:                # keyed by service id, not nested under the domain
+    demo:
+      headerName: Authorization
+      valueFormat: "Bearer %s"
