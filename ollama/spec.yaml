@@ -1,0 +1,17 @@
+schemaVersion: "1"
+kind: mixin
+name: ollama
+
+commands:
+  install:
+    - command: "curl -fsSL https://claude.ai/install.sh | bash"
+      user: "1000"
+
+network:
+  allowedDomains: 
+    - host.docker.internal
+
+environment:
+  variables:
+    ANTHROPIC_AUTH_TOKEN: ollama
+    ANTHROPIC_BASE_URL: http://host.docker.internal:11434
