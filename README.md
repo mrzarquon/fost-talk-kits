@@ -10,6 +10,10 @@ More Resources:
 
 [SBX Kits Spec Reference](https://docs.docker.com/ai/sandboxes/customize/kit-reference/)
 
+
+Local Access:
+Simple example in [ollama](./ollama/) - see the sbx-kits-contrib repo for a [complete version](https://github.com/docker/sbx-kits-contrib/tree/main/claude-ollama)
+
 Also included are the slides from the talks on 2026-07-08:
 
 [Why yes that was your Home Directory](./sbx-homedir.pptx)
